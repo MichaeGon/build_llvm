@@ -41,5 +41,5 @@ done
 
 mkdir build
 cd build
-cmake -G "Ninja" -DCMAKE_INSTALL_PREFIX=/usr/local/llvm/ ../llvm/
+cmake -G "Ninja" -DLLVM_EXPERIMENTAL_TARGETS_TO_BUILD=WebAssembly -DLLVM_TARGETS_TO_BUILD=all -DCMAKE_INSTALL_PREFIX=/usr/local/llvm/ ../llvm/
 ninja
